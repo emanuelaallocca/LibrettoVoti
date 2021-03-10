@@ -29,7 +29,39 @@ public class Libretto { //CLASSE CHE CONTIENTE TANTI VOTI CHE POSSO METTERE IN U
 		return s;
 	}
 	
+	/*public void stampaVotiUguali (int punteggio) {
+		//il libretto stampa da solo i voti
+		//fatto per fare System.out --> stampa a video
+		//se devo mettere i voti a INTERFACCIA GRAFICA non lo posso usare
+	}
 	
+	public String votiUguali (int punteggio) {
+		//calcola una stringa che contiene i voti
+		//stampa i voti il chiamante
+		//POSSO SCEGLIERE DI STAMPARE POI IN INTERFACCIA --> PIù GENERALE, MEGLIO
+	}
+	*/
+	public List<Voto> listaVotiUguali (int punteggio){
+		//restituisce i voti uguali al criterio
+		//mi piace perchè risolve il problema di cosa devo stampare
+		//PROBLEMA: espone all'esterno la tipologia di struttura dati che sto utilizzando
+		
+		List <Voto> risultato = new ArrayList <>();
+		for (Voto v : this.voti)
+			if (v.getVoto()==punteggio)
+				risultato.add(v); //so che il mio oggetto è contenuto in liste diverse
+		return risultato;
+	}
+	
+	public Libretto votiUguali (int punteggio) {
+		//ti do un libretto con quei vuoti, poi se vuoi te li stampi
+		Libretto risultato = new Libretto ();
+		for (Voto v : this.voti)
+			if (v.getVoto()==punteggio)
+				risultato.add(v);
+		return risultato;
+	}
+	//LA CLASSE LIBRETTO PUO VEDERE E MODIFICARE INTERNAMENTE I SUOI DATI
 
 
 	
