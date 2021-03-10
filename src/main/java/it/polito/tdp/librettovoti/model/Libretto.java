@@ -52,6 +52,19 @@ public class Libretto { //CLASSE CHE CONTIENTE TANTI VOTI CHE POSSO METTERE IN U
 				risultato.add(v); //so che il mio oggetto è contenuto in liste diverse
 		return risultato;
 	}
+	/**
+	 * RICERCA UN VOTO DEL CORSO SPECIFICATO IL NOME
+	 * SE IL CORSO NON ESISTE RESTITUISCE NULL
+	 * @param nomeCorso
+	 * @return
+	 */
+	public Voto ricercaCorso (String nomeCorso) {
+		Voto risultato = null;
+		for (Voto v: this.voti)
+			if (v.getNome().equals(nomeCorso)) // a noi interessa l'uguaglianza --> equals
+				risultato = v;
+		return risultato;
+	}
 	
 	public Libretto votiUguali (int punteggio) {
 		//ti do un libretto con quei vuoti, poi se vuoi te li stampi

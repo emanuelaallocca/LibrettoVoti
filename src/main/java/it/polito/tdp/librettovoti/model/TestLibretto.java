@@ -23,7 +23,7 @@ public class TestLibretto { //PROGRAMMA CHE CREA 10 VOTI E LI AGGIUNGE
 		System.out.println(venticinque.toString()); //rappresentazione di una lista con []
 		
 		Libretto venticinq = libretto.votiUguali(25); //QUESTO LIBRETTO HA ANCHE UN METODO ADD --> POTREI AGGIUNGERE ALTRI VOTI
-		System.out.println(venticinq.toString());     //HO OGGETTO CHE SA GESTIRE I PROPRI DATI
+		System.out.println(venticinq.toString());     //HO OGGETTO CHE SA GESTIRE I PROPRI DATI  
 
 	}
 
